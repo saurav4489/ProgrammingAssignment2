@@ -1,5 +1,6 @@
 
-
+#Creates the function that will store the matrix in an environment and return 
+#directly from memory. This will reduce the computation time
 makeCacheMatrix <- function(x = matrix()) {
       inv = NULL
       set <- function(y){
@@ -22,7 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
            getinverse = getinverse)
 }
 
-
+#This function finds the inverse of matrix
+#If it is already computed earlier it returns the same result
+#Else it is computed again
 cacheSolve <- function(x, ...) {
       
       inv <- x$getinverse()
